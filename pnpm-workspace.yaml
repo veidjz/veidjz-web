@@ -3,4 +3,8 @@ packages:
   - 'packages/*'
 
 allowBuilds:
+  lefthook: true
   sharp: true
+
+minimumReleaseAgeExclude:
+  - jsdom@30.0.1
