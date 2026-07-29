@@ -1,0 +1,13 @@
+{
+  "name": "veidjz-web",
+  "private": true,
+  "packageManager": "pnpm@11.18.0",
+  "scripts": {
+    "dev": "pnpm --filter @veidjz/web dev",
+    "build": "pnpm -r --filter @veidjz/web... build",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  }
+}
