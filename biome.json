@@ -6,7 +6,13 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!**/pnpm-lock.yaml", "!**/next-env.d.ts", "!**/.next"]
+    "includes": [
+      "**",
+      "!**/pnpm-lock.yaml",
+      "!**/next-env.d.ts",
+      "!**/.next",
+      "!**/storybook-static"
+    ]
   },
   "formatter": {
     "enabled": true,
