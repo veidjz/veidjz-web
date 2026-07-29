@@ -1,10 +1,12 @@
 import { Hello } from '@veidjz/ui'
+import styles from './page.module.css'
 
 export default function HomePage() {
   return (
-    <main>
-      <h1>veidjz</h1>
+    <div className={styles.root}>
+      <h1 className={styles.title}>veidjz</h1>
       <Hello />
-    </main>
+      <p className={styles.lead}>Software Engineer</p>
+    </div>
   )
 }
