@@ -30,9 +30,14 @@ describe('ThemeToggle', () => {
     render(<ThemeToggle />)
 
     const button = screen.getByRole('button', { name: 'Ativar tema escuro' })
+    expect(button.querySelector('svg')).toBeTruthy()
+    expect(button.textContent).toBe('')
     fireEvent.click(button)
 
     expect(document.documentElement.getAttribute('data-theme')).toBe('dark')
     expect(window.localStorage.getItem(THEME_STORAGE_KEY)).toBe('dark')
+    expect(
+      screen.getByRole('button', { name: 'Ativar tema claro' }),
+    ).toBeTruthy()
   })
 })
