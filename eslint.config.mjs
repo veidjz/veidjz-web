@@ -10,6 +10,7 @@ export default [
       '**/.next/**',
       '**/dist/**',
       '**/coverage/**',
+      '**/storybook-static/**',
       '**/pnpm-lock.yaml',
       '**/next-env.d.ts',
     ],

@@ -4,6 +4,7 @@ dist
 .next
 out
 coverage
+storybook-static
 *.tsbuildinfo
 .DS_Store
 .env

@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "pnpm --filter @veidjz/web dev",
     "build": "pnpm -r --filter @veidjz/web... build",
+    "storybook": "pnpm --filter @veidjz/ui storybook",
+    "build-storybook": "pnpm --filter @veidjz/ui build-storybook",
     "check-disables": "node scripts/check-disables.mjs",
     "lint:biome": "biome check .",
     "lint:eslint": "eslint .",
