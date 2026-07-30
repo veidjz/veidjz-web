@@ -1,0 +1,25 @@
+.root {
+  margin: 0;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.default {
+  color: var(--ink);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.sm {
+  font-size: 0.875rem;
+}
+
+.md {
+  font-size: 1rem;
+}
+
+.lg {
+  font-size: 1.125rem;
+}
