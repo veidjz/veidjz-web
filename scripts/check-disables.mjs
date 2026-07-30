@@ -17,6 +17,9 @@ const skipDirNames = new Set([
   'coverage',
   'dist',
   'node_modules',
+  'playwright-report',
+  'storybook-static',
+  'test-results',
 ])
 
 const skipFileNames = new Set(['next-env.d.ts', 'pnpm-lock.yaml'])

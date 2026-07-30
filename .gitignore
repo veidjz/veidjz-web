@@ -5,6 +5,9 @@ dist
 out
 coverage
 storybook-static
+test-results
+playwright-report
+blob-report
 *.tsbuildinfo
 .DS_Store
 .env
