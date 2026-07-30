@@ -1,0 +1,42 @@
+.root {
+  border-top: 1px solid var(--line);
+  background: var(--bg-elevated);
+}
+
+.inner {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 2.5rem;
+}
+
+.brand {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.wordmark {
+  margin: 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 720px) {
+  .inner {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    align-items: start;
+  }
+}

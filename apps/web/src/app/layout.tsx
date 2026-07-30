@@ -1,8 +1,9 @@
-import { ThemeToggle } from '@veidjz/ui'
 import type { Metadata } from 'next'
 import { IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import type { ReactNode } from 'react'
 import '@veidjz/ui/tokens.css'
+import { SiteFooter } from '../components/SiteFooter'
+import { SiteHeader } from '../components/SiteHeader'
 import styles from './layout.module.css'
 
 const sans = IBM_Plex_Sans({
@@ -20,8 +21,12 @@ const serif = IBM_Plex_Serif({
 })
 
 export const metadata: Metadata = {
-  title: 'veidjz',
-  description: 'João Victor Veidz',
+  title: {
+    default: 'veidjz — João Victor Veidz',
+    template: '%s · veidjz',
+  },
+  description:
+    'Software Engineer | Full Stack & Mobile. João Victor Veidz — React Native, React, Node.js e C#/.NET.',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -35,11 +40,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script src="/theme-boot.js" />
       </head>
       <body className={styles.body}>
-        <header className={styles.header}>
-          <span className={styles.wordmark}>veidjz</span>
-          <ThemeToggle />
-        </header>
-        <main className={styles.main}>{children}</main>
+        <SiteHeader />
+        <div className={styles.shell}>{children}</div>
+        <SiteFooter />
       </body>
     </html>
   )
