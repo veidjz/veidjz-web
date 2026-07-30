@@ -10,13 +10,16 @@
   }
 }
 
+.main {
+  padding-top: 1.25rem;
+}
+
 .hero {
   display: grid;
-  gap: 2rem;
-  align-items: end;
-  padding-bottom: 2.5rem;
+  gap: 1.75rem;
+  align-items: center;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--line);
-  min-height: min(72vh, 36rem);
 }
 
 .heroCopy {
@@ -25,19 +28,9 @@
   max-width: 36rem;
 }
 
-.brand {
-  margin: 0;
-  font-family: var(--font-serif), Georgia, serif;
-  font-weight: 700;
-  font-size: clamp(2.75rem, 8vw, 4.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+.name {
   color: var(--accent);
   animation: rise 0.55s ease-out both;
-}
-
-.name {
-  animation: rise 0.55s ease-out 0.08s both;
 }
 
 .headline {
@@ -86,25 +79,32 @@
 }
 
 .portrait {
-  display: grid;
-  place-items: center;
-  width: min(100%, 14rem);
+  justify-self: end;
+  width: min(100%, 15.5rem);
   aspect-ratio: 3 / 4;
-  border: 1px solid var(--line);
-  background: linear-gradient(
-    160deg,
-    var(--accent-soft),
-    color-mix(in srgb, var(--bg-elevated) 70%, var(--accent-soft))
-  );
+  overflow: hidden;
+  background: transparent;
   animation: rise 0.7s ease-out 0.18s both;
 }
 
-.monogram {
-  font-family: var(--font-serif), Georgia, serif;
-  font-weight: 700;
-  font-size: 3rem;
-  letter-spacing: -0.03em;
-  color: var(--accent);
+.portraitImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.portraitDark {
+  display: none;
+}
+
+:global([data-theme="dark"]) .portraitLight {
+  display: none;
+}
+
+:global([data-theme="dark"]) .portraitDark {
+  display: block;
 }
 
 .section {
@@ -185,12 +185,11 @@
 @media (min-width: 800px) {
   .hero {
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: 3rem;
+    gap: 2.25rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .brand,
   .name,
   .headline,
   .value,

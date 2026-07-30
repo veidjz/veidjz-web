@@ -1,5 +1,4 @@
 export const homeCopy = {
-  brand: 'veidjz',
   name: 'João Victor Veidz',
   headline: 'Software Engineer | Full Stack & Mobile',
   valueProp:
