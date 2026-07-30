@@ -1,4 +1,5 @@
 import { Heading, Layout, Link, Text } from '@veidjz/ui'
+import Image from 'next/image'
 import { cases } from '../content/cases'
 import { homeCopy } from '../content/home'
 import styles from './page.module.css'
@@ -6,12 +7,9 @@ import styles from './page.module.css'
 export default function HomePage() {
   return (
     <Layout as="main">
-      <section className={styles.hero} aria-labelledby="home-brand">
+      <section className={styles.hero} aria-labelledby="home-name">
         <div className={styles.heroCopy}>
-          <p className={styles.brand} id="home-brand">
-            {homeCopy.brand}
-          </p>
-          <Heading as="h1" size="xl" className={styles.name}>
+          <Heading as="h1" size="xl" className={styles.name} id="home-name">
             {homeCopy.name}
           </Heading>
           <p className={styles.headline}>{homeCopy.headline}</p>
@@ -23,8 +21,15 @@ export default function HomePage() {
             <Link href="/casos">Ver casos</Link>
           </div>
         </div>
-        <div className={styles.portrait} aria-hidden="true">
-          <span className={styles.monogram}>JV</span>
+        <div className={styles.portrait}>
+          <Image
+            src="/profile.jpg"
+            alt="Retrato de João Victor Veidz"
+            width={675}
+            height={900}
+            className={styles.portraitImage}
+            priority
+          />
         </div>
       </section>
 
