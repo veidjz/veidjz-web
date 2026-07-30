@@ -6,7 +6,7 @@ import styles from './page.module.css'
 
 export default function HomePage() {
   return (
-    <Layout as="main">
+    <Layout as="main" className={styles.main}>
       <section className={styles.hero} aria-labelledby="home-name">
         <div className={styles.heroCopy}>
           <Heading as="h1" size="xl" className={styles.name} id="home-name">
