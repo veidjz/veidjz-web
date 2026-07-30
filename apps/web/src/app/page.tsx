@@ -27,7 +27,15 @@ export default function HomePage() {
             alt="Retrato de João Victor Veidz"
             width={675}
             height={900}
-            className={styles.portraitImage}
+            className={`${styles.portraitImage} ${styles.portraitLight}`}
+            priority
+          />
+          <Image
+            src="/profile-hero-dark.jpg"
+            alt=""
+            width={675}
+            height={900}
+            className={`${styles.portraitImage} ${styles.portraitDark}`}
             priority
           />
         </div>
