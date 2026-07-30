@@ -1,0 +1,14 @@
+FROM node:24-bookworm-slim AS build
+WORKDIR /app
+RUN corepack enable
+COPY . .
+RUN pnpm install --frozen-lockfile
+RUN pnpm build-storybook
+
+FROM node:24-bookworm-slim
+WORKDIR /app
+RUN npm install -g http-server@14.1.1
+COPY --from=build /app/packages/ui/storybook-static ./storybook-static
+ENV PORT=8080
+EXPOSE 8080
+CMD ["sh", "-c", "exec http-server storybook-static -p \"$PORT\" -a 0.0.0.0"]
