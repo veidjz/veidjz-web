@@ -29,6 +29,7 @@ describe('SiteHeader', () => {
     expect(
       screen.getByRole('link', { name: 'veidjz' }).getAttribute('href'),
     ).toBe('/')
+    expect(screen.queryByRole('link', { name: 'Início' })).toBeNull()
     expect(screen.getByRole('link', { name: 'Experiência' })).toBeTruthy()
     expect(screen.getByRole('link', { name: 'Casos' })).toBeTruthy()
     expect(screen.getByRole('link', { name: 'Contato' })).toBeTruthy()
