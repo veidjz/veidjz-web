@@ -1,0 +1,15 @@
+.section {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section:first-child {
+  padding-top: 0.35rem;
+}
+
+.section:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
