@@ -1,0 +1,19 @@
+.root {
+  color: var(--accent);
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+  cursor: pointer;
+}
+
+.root:hover {
+  color: var(--accent-hover);
+}
+
+.root:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
