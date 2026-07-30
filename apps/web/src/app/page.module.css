@@ -85,16 +85,6 @@
   overflow: hidden;
   background: transparent;
   animation: rise 0.7s ease-out 0.18s both;
-  -webkit-mask-image: radial-gradient(
-    ellipse 95% 90% at 50% 40%,
-    #000 52%,
-    transparent 78%
-  );
-  mask-image: radial-gradient(
-    ellipse 95% 90% at 50% 40%,
-    #000 52%,
-    transparent 78%
-  );
 }
 
 .portraitImage {
@@ -102,7 +92,20 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center 18%;
+}
+
+:global([data-theme="dark"]) .portrait {
+  -webkit-mask-image: radial-gradient(
+    ellipse 96% 92% at 50% 38%,
+    #000 58%,
+    transparent 82%
+  );
+  mask-image: radial-gradient(
+    ellipse 96% 92% at 50% 38%,
+    #000 58%,
+    transparent 82%
+  );
 }
 
 .section {
