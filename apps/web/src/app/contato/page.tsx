@@ -3,21 +3,30 @@ import type { Metadata } from 'next'
 import { PageFrame } from '../../components/PageFrame'
 import { contactCopy } from '../../content/contact'
 import { contactLinks } from '../../content/nav'
+import { resumeCopy } from '../../content/resume'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: 'Contato',
   description:
-    'E-mail, LinkedIn, GitHub e WhatsApp de João Victor Veidz. São Paulo, SP · Remoto - Brasil.',
+    'E-mail, LinkedIn, GitHub, WhatsApp e CV de João Victor Veidz. São Paulo, SP · Remoto - Brasil.',
 }
 
 export default function ContatoPage() {
   return (
     <PageFrame title="Contato">
       <Text>{contactCopy.intro}</Text>
-      <a href={`mailto:${contactLinks.email}`} className={styles.cta}>
-        {contactCopy.ctaLabel}
-      </a>
+      <div className={styles.ctaRow}>
+        <a href={`mailto:${contactLinks.email}`} className={styles.cta}>
+          {contactCopy.ctaLabel}
+        </a>
+        <a href={resumeCopy.href} className={styles.ctaSecondary} download>
+          {resumeCopy.label}
+        </a>
+      </div>
+      <Text tone="muted" size="sm">
+        {resumeCopy.note}
+      </Text>
       <section className={styles.section} aria-labelledby="contact-channels">
         <Heading as="h2" size="md" id="contact-channels">
           {contactCopy.channelsHeading}
