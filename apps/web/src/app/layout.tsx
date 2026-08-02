@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 import '@veidjz/ui/tokens.css'
 import { SiteFooter } from '../components/SiteFooter'
 import { SiteHeader } from '../components/SiteHeader'
+import { siteCopy, siteUrl } from '../content/site'
 import styles from './layout.module.css'
 
 const sans = IBM_Plex_Sans({
@@ -21,12 +22,44 @@ const serif = IBM_Plex_Serif({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: 'veidjz — João Victor Veidz',
+    default: siteCopy.title,
     template: '%s · veidjz',
   },
-  description:
-    'Software Engineer | Full Stack & Mobile. João Victor Veidz — React Native, React, Node.js e C#/.NET.',
+  description: siteCopy.description,
+  applicationName: siteCopy.name,
+  authors: [{ name: 'João Victor Veidz', url: siteUrl }],
+  creator: 'João Victor Veidz',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: siteUrl,
+    siteName: siteCopy.name,
+    title: siteCopy.title,
+    description: siteCopy.description,
+    images: [
+      {
+        url: siteCopy.ogImage,
+        width: 675,
+        height: 900,
+        alt: siteCopy.ogImageAlt,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: siteCopy.title,
+    description: siteCopy.description,
+    images: [siteCopy.ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
