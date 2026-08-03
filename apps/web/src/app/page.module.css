@@ -101,19 +101,19 @@
 }
 
 .portraitLight {
-  opacity: 1;
+  display: block;
 }
 
 .portraitDark {
-  opacity: 0;
+  display: none;
 }
 
 :global([data-theme="dark"]) .portraitLight {
-  opacity: 0;
+  display: none;
 }
 
 :global([data-theme="dark"]) .portraitDark {
-  opacity: 1;
+  display: block;
 }
 
 .section {
