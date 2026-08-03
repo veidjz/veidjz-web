@@ -21,10 +21,14 @@ export default function HomePage() {
             <Link href="/casos">Ver casos</Link>
           </div>
         </div>
-        <div className={styles.portrait}>
+        <div
+          className={styles.portrait}
+          role="img"
+          aria-label="Retrato de João Victor Veidz"
+        >
           <Image
             src="/profile-hero.png"
-            alt="Retrato de João Victor Veidz"
+            alt=""
             width={675}
             height={900}
             className={`${styles.portraitImage} ${styles.portraitLight}`}
