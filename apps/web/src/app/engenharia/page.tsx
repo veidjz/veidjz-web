@@ -7,7 +7,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: 'Engenharia',
   description:
-    'Como este site foi construído: stack, design system, qualidade e limites de conteúdo.',
+    'Como este site foi construído: stack, design system, qualidade, acessibilidade e limites de conteúdo.',
 }
 
 export default function EngenhariaPage() {
@@ -24,6 +24,13 @@ export default function EngenhariaPage() {
             {section.heading}
           </Heading>
           <Text>{section.body}</Text>
+          <ul className={styles.bullets}>
+            {section.bullets.map((bullet) => (
+              <li key={bullet}>
+                <Text as="span">{bullet}</Text>
+              </li>
+            ))}
+          </ul>
         </section>
       ))}
       <section className={styles.section} aria-labelledby="eng-links">
