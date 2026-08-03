@@ -25,9 +25,22 @@ Build estático:
 pnpm build-storybook
 ```
 
-Saída em `packages/ui/storybook-static`. Domínio público planejado: [ui.veidjz.com](https://ui.veidjz.com).
+Saída em `packages/ui/storybook-static`. Público: [ui.veidjz.com](https://ui.veidjz.com).
 
-### Deploy no Railway (serviço separado)
+### Deploy no Railway (serviço do site)
+
+Serviço `@veidjz/web` → domínio `veidjz.com`.
+
+1. Settings → Config-as-code → Config File Path: `/apps/web/railway.json` (watch paths do monorepo).
+2. Settings → Watch Paths: deixe vazio no dashboard (o arquivo manda), ou use:
+   - `/apps/web/**`
+   - `/packages/ui/**`
+   - `/package.json`
+   - `/pnpm-lock.yaml`
+   - `/pnpm-workspace.yaml`
+3. Se builds aparecerem como **SKIPPED** (“No changes to watched files”), limpe Watch Paths e use Command Palette → **Deploy Latest Commit**.
+
+### Deploy no Railway (serviço Storybook)
 
 Não use o serviço do site (`apps/web`). Crie outro serviço no mesmo projeto Railway, apontando para este repo.
 
