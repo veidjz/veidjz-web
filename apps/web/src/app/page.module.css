@@ -78,7 +78,9 @@
 
 .portrait {
   justify-self: end;
-  width: min(100%, 15.5rem);
+  width: 100%;
+  max-width: 15.5rem;
+  min-width: 0;
   aspect-ratio: 3 / 4;
   overflow: hidden;
   background: transparent;
@@ -182,7 +184,7 @@
 
 @media (min-width: 800px) {
   .hero {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) 15.5rem;
     gap: 2.25rem;
   }
 }
