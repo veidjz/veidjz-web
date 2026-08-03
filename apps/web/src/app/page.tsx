@@ -27,7 +27,7 @@ export default function HomePage() {
           aria-label="Retrato de João Victor Veidz"
         >
           <Image
-            src="/profile-hero.png"
+            src="/profile-hero-light.jpg"
             alt=""
             width={675}
             height={900}

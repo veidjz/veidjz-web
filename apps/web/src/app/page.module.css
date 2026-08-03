@@ -79,6 +79,7 @@
 .portrait {
   position: relative;
   justify-self: end;
+  align-self: end;
   width: 100%;
   max-width: 15.5rem;
   min-width: 0;
