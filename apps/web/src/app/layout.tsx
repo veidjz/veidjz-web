@@ -41,20 +41,11 @@ export const metadata: Metadata = {
     siteName: siteCopy.name,
     title: siteCopy.title,
     description: siteCopy.description,
-    images: [
-      {
-        url: siteCopy.ogImage,
-        width: 675,
-        height: 900,
-        alt: siteCopy.ogImageAlt,
-      },
-    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: siteCopy.title,
     description: siteCopy.description,
-    images: [siteCopy.ogImage],
   },
   robots: {
     index: true,
