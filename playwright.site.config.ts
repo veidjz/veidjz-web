@@ -16,6 +16,16 @@ export default defineConfig({
     trace: 'on-first-retry',
     colorScheme: 'light',
     reducedMotion: 'reduce',
+    viewport: { width: 1280, height: 720 },
+    deviceScaleFactor: 1,
+  },
+  expect: {
+    toHaveScreenshot: {
+      animations: 'disabled',
+      caret: 'hide',
+      scale: 'css',
+      maxDiffPixelRatio: 0.02,
+    },
   },
   projects: [
     {
@@ -24,6 +34,8 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         colorScheme: 'light',
         reducedMotion: 'reduce',
+        viewport: { width: 1280, height: 720 },
+        deviceScaleFactor: 1,
       },
     },
   ],
