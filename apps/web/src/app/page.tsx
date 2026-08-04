@@ -23,7 +23,7 @@ export default function HomePage() {
         </div>
         <div className={styles.portrait}>
           <Image
-            src="/profile-hero-dark.jpg"
+            src="/profile-hero-transparent.png"
             alt="Retrato de João Victor Veidz"
             width={675}
             height={900}
