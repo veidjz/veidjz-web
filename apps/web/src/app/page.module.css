@@ -83,7 +83,7 @@
   max-width: 15.5rem;
   min-width: 0;
   overflow: hidden;
-  background: #000;
+  background: transparent;
   animation: rise 0.7s ease-out 0.18s both;
 }
 
